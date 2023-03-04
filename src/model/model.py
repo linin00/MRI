@@ -1,7 +1,5 @@
 import torch.nn as nn
 import torch.nn.functional as F
-import numpy as np
-import torch
 
 class LeNet(nn.Module):
   def __init__(self) -> None:
