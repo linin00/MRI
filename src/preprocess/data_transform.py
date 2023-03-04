@@ -76,33 +76,3 @@ if __name__ == '__main__':
   imgs, labels = dataset_save.get_split_dataset()
   print("amount of images", len(imgs))
   print("labels: ", labels)
-  # mkdir(save_path)
-  # labels = pd.read_excel('./label.xlsx', sheet_name='Sheet1')
-
-  # for base_name in os.listdir(imgs_path):
-  #   net_data = []
-  #   pid = base_name
-  #   label = labels[labels['MRI ID'] == pid]['Group']
-  #   suffix = r'/RAW/mpr-1.nifti.hdr'
-  #   img_path = base_name + suffix
-  #   absolute_path = os.path.join(imgs_path, img_path)
-  #   img_data = nib.load(absolute_path)
-  #   img = img_data.get_fdata()
-  #   # print(img.shape)
-  #   img = resize(img, (128,128,128), order=0)#将图像大小进行统一缩放，方便输入网络，分别为（h,w,c）,可根据自己的数据集来更改
-  #   img = np.array(img)
-  #   if np.min(img) < np.max(img):
-  #     img = img - np.min(img)
-  #     img = img / np.max(img)
-  #   if np.unique(label=='Nondemented'):
-  #     label_data = 0  #非痴呆为0， 痴呆为1
-  #     net_data.append([img, label_data])
-  #     np.save(os.path.join(save_path, pid), img) #保存
-  #   elif np.unique(label=='Demented'):
-  #     label_data = 1
-  #     net_data.append([img, label_data])
-  #     np.save(os.path.join(save_path, pid), img)  #
-  #   else:
-  #     print('unexpected label: %s' % label)
-
-  # print('Done')
